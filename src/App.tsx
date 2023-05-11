@@ -1,5 +1,5 @@
+import * as P from '@pages'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import * as P from '@/pages'
 
 const App = () => {
   const router = createBrowserRouter([
