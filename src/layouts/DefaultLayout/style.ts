@@ -6,5 +6,6 @@ export const Wrapper = styled.div`
   max-width: 480px;
   padding: 0 1rem;
   height: 100vh;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px #b1b1b1;
+  position: relative;
 `
