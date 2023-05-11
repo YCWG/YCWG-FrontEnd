@@ -5,6 +5,8 @@ import * as S from './style'
 const Navigation = () => {
   const location = useLocation()
 
+  if (!['/my', '/', '/parties'].includes(location.pathname)) return null
+
   return (
     <S.Wrapper>
       <S.Tab to='/'>
