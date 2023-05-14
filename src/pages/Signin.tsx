@@ -1,7 +1,7 @@
 import { SigninForm, Title } from '@features/auth'
 import * as L from '@layouts'
 
-const Login = () => {
+const Signin = () => {
   return (
     <L.AuthLayout>
       <Title />
@@ -10,4 +10,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signin

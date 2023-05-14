@@ -8,8 +8,12 @@ const App = () => {
       element: <L.DefaultLayout />,
       children: [
         {
-          path: '/login',
-          element: <P.Login />,
+          path: '/signin',
+          element: <P.Signin />,
+        },
+        {
+          path: '/signup',
+          element: <P.Signup />,
         },
       ],
     },
