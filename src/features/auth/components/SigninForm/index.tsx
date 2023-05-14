@@ -17,7 +17,12 @@ const SigninForm = () => {
           placeholder='비밀번호'
         />
       </S.InputWrapper>
-      <Button type='submit'>로그인</Button>
+      <S.ButtonWrapper>
+        <Button type='submit'>로그인</Button>
+        <S.Move to='/signup'>
+          계정이 없다면? <S.Bold>회원가입하기</S.Bold>
+        </S.Move>
+      </S.ButtonWrapper>
     </S.Wrapper>
   )
 }

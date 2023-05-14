@@ -25,7 +25,12 @@ const SignupForm = () => {
           placeholder='닉네임'
         />
       </S.InputWrapper>
-      <Button type='submit'>로그인</Button>
+      <S.ButtonWrapper>
+        <Button type='submit'>가입하기</Button>
+        <S.Move to='/signin'>
+          이미 계정이 있다면? <S.Bold>로그인하기</S.Bold>
+        </S.Move>
+      </S.ButtonWrapper>
     </S.Wrapper>
   )
 }
