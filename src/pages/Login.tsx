@@ -1,10 +1,10 @@
-import { AuthForm } from '@features/auth'
+import { SigninForm } from '@features/auth'
 import * as L from '@layouts'
 
 const Login = () => {
   return (
     <L.DefaultLayout>
-      <AuthForm />
+      <SigninForm />
     </L.DefaultLayout>
   )
 }
