@@ -1,15 +1,11 @@
 import { Navigation } from '@components'
-import { ReactNode } from 'react'
+import { Outlet } from 'react-router-dom'
 import * as S from './style'
 
-interface Props {
-  children?: ReactNode
-}
-
-const DefaultLayout = ({ children }: Props) => {
+const DefaultLayout = () => {
   return (
     <S.Wrapper>
-      {children}
+      <Outlet />
       <Navigation />
     </S.Wrapper>
   )

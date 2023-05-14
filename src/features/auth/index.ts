@@ -1,1 +1,1 @@
-export { SignupForm, SigninForm } from './components'
+export * from './components'
