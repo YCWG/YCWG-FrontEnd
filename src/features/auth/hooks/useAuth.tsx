@@ -1,13 +1,13 @@
 import { AuthFormType } from '@features/auth/types'
-import loginApi from '@features/auth/services/login'
+import authApi from '@features/auth/services/auth'
 import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 
 const useAuth = () => {
   const { register, handleSubmit } = useForm<AuthFormType>()
   const navigate = useNavigate()
-  const [login] = loginApi.useLoginMutation()
-  const [signup] = loginApi.useRegisterMutation()
+  const [login] = authApi.useLoginMutation()
+  const [signup] = authApi.useRegisterMutation()
 
   const onSubmit = handleSubmit(async (form: AuthFormType) => {
     let data

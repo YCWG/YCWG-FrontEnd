@@ -6,7 +6,7 @@ interface Response {
   access_token: string
 }
 
-const loginApi = api.injectEndpoints({
+const authApi = api.injectEndpoints({
   endpoints: (build) => ({
     login: build.mutation<Response, AuthFormType>({
       query: (body) => ({
@@ -27,4 +27,4 @@ const loginApi = api.injectEndpoints({
   }),
 })
 
-export default loginApi
+export default authApi

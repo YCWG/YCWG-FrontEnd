@@ -1,8 +1,12 @@
 interface Party {
   title: string
-  pos: string
+  image: string
+  category: string
+  place: string
+  member_limit: number
   date: string
-  imgUrl: string
-  peopleNum: number
-  isCompleted: boolean
+  description: string
+  latitude: number
+  longitude: number
+  now_member: number
 }
