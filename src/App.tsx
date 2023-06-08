@@ -16,6 +16,10 @@ const App = () => {
           element: <P.Signup />,
         },
         {
+          path: '/parties',
+          element: <P.Parties />,
+        },
+        {
           path: '/test',
           element: <P.Test />,
         },
