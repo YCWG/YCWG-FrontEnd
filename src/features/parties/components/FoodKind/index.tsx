@@ -21,7 +21,7 @@ const Wrapper = styled.select`
 
 const FoodKind = forwardRef<HTMLSelectElement, Props>(({ ...props }, ref) => {
   return (
-    <Wrapper ref={ref} defaultValue='DEFAULT' {...props}>
+    <Wrapper ref={ref} defaultValue='한식' {...props}>
       <option value='DEFAULT' disabled>
         음식 종류
       </option>
