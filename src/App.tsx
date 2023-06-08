@@ -15,6 +15,10 @@ const App = () => {
           path: '/signup',
           element: <P.Signup />,
         },
+        {
+          path: '/test',
+          element: <P.Test />,
+        },
       ],
     },
   ])

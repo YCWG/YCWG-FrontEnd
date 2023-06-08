@@ -1,11 +1,8 @@
 import * as S from './style'
 
-interface Props {
-  title: string
-  imgUrl: string
-  pos: string
+interface Props extends Omit<Party, 'date' | 'isCompleted'> {
   date: Date
-  peopleNum: number
+  isCompleted?: boolean
 }
 
 const Party = ({ title, imgUrl, pos, date, peopleNum }: Props) => {
