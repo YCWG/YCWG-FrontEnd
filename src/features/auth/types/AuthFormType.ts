@@ -1,8 +1,8 @@
 interface AuthFormType {
   email: string
   password: string
-  passwordConfirm?: string
-  nickname?: string
+  password2?: string
+  username?: string
 }
 
 export default AuthFormType

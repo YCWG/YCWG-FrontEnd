@@ -11,7 +11,7 @@ const useAuth = () => {
 
   const onSubmit = handleSubmit(async (form: AuthFormType) => {
     let data
-    if (!form.nickname && !form.passwordConfirm) {
+    if (form.username && form.password2) {
       data = await signup(form)
       if ('error' in data) return console.log(data.error)
     } else {
@@ -19,7 +19,8 @@ const useAuth = () => {
       if ('error' in data) return console.log(data.error)
     }
 
-    localStorage.setItem('access', data.data.access_token)
+    if (data.data.access_token)
+      localStorage.setItem('access', data.data.access_token)
 
     navigate('/')
   })

@@ -5,7 +5,8 @@ import * as S from './style'
 const Navigation = () => {
   const location = useLocation()
 
-  if (!['/my', '/', '/parties'].includes(location.pathname)) return null
+  if (!['/my', '/', '/parties', '/parties/create'].includes(location.pathname))
+    return null
 
   return (
     <S.Wrapper>
@@ -14,7 +15,7 @@ const Navigation = () => {
         <S.TabTitle>내 주변</S.TabTitle>
       </S.Tab>
       <S.Tab to='/parties'>
-        {location.pathname === '/parties' ? (
+        {location.pathname.includes('/parties') ? (
           <SVG.PeopleFocus />
         ) : (
           <SVG.People />

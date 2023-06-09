@@ -17,11 +17,11 @@ const SignupForm = () => {
           placeholder='비밀번호'
         />
         <Input
-          {...register('passwordConfirm', { required: true })}
+          {...register('password2', { required: true })}
           placeholder='비밀번호 확인'
         />
         <Input
-          {...register('nickname', { required: true })}
+          {...register('username', { required: true })}
           placeholder='닉네임'
         />
       </S.InputWrapper>

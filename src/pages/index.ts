@@ -1,4 +1,5 @@
 export { default as Signin } from './Signin'
 export { default as Signup } from './Signup'
-export { default as Parties } from './Parties'
+export { default as CreatePage } from './CreatePage'
+export { default as Parties } from './PartiesPage'
 export { default as Test } from './Test'

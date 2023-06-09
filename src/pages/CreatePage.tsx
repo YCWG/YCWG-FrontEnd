@@ -1,10 +1,10 @@
 import { Header } from '@components'
-import Create from '@features/parties/components/Create'
+import { Create } from '@features/parties/components'
 import * as L from '@layouts'
 import * as SVG from '@assets/svg'
 import { useNavigate } from 'react-router-dom'
 
-const Parties = () => {
+const CreatePage = () => {
   const navigate = useNavigate()
   return (
     <>
@@ -23,4 +23,4 @@ const Parties = () => {
   )
 }
 
-export default Parties
+export default CreatePage

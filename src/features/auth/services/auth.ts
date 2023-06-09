@@ -19,7 +19,7 @@ const authApi = api.injectEndpoints({
     register: build.mutation<Response, AuthFormType>({
       query: (body) => ({
         headers: { Authorization: undefined },
-        url: '/api/auth/register/',
+        url: '/api/auth/register',
         method: 'POST',
         body,
       }),

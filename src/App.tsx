@@ -20,6 +20,10 @@ const App = () => {
           element: <P.Parties />,
         },
         {
+          path: '/parties/create',
+          element: <P.CreatePage />,
+        },
+        {
           path: '/test',
           element: <P.Test />,
         },
