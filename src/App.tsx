@@ -24,6 +24,10 @@ const App = () => {
           element: <P.CreatePage />,
         },
         {
+          path: '/my',
+          element: <P.MyPage />,
+        },
+        {
           path: '/test',
           element: <P.Test />,
         },
