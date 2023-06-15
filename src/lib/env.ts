@@ -1,6 +1,17 @@
-const { DEV, SSR, MODE, PROD, BASE_URL, VITE_SERVER_URL } = import.meta.env
+const {
+  DEV,
+  SSR,
+  MODE,
+  PROD,
+  BASE_URL,
+  VITE_SERVER_URL,
+  VITE_PROJECT_ID,
+  VITE_BUCKET_ID,
+  VITE_API_KEY,
+} = import.meta.env
 
-if (!VITE_SERVER_URL) throw new Error('missing environment value')
+if (!VITE_SERVER_URL || !VITE_PROJECT_ID || !VITE_BUCKET_ID || !VITE_API_KEY)
+  throw new Error('missing environment value')
 
 const env = {
   DEV,
@@ -9,6 +20,9 @@ const env = {
   PROD,
   BASE_URL,
   VITE_SERVER_URL: VITE_SERVER_URL + '',
+  VITE_PROJECT_ID: VITE_PROJECT_ID + '',
+  VITE_BUCKET_ID: VITE_BUCKET_ID + '',
+  VITE_API_KEY: VITE_API_KEY + '',
 }
 
 export default env

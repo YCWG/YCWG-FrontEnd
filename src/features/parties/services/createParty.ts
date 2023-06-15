@@ -5,7 +5,7 @@ const createPartyApi = api.injectEndpoints({
     uploadImg: build.mutation<{ image: string }, FormData>({
       query: (body) => ({
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'multipart/form-data',
           Authorization: `Bearer ${localStorage.getItem('access')}`,
         },
         url: '/partylist/image/',

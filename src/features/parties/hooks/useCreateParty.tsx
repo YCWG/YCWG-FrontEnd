@@ -1,22 +1,26 @@
 import createPartyApi from '@features/parties/services/createParty'
 import { createFormType } from '@features/parties/type/createFormType'
+import env from '@lib/env'
+import storage from '@storage'
+import { InputFile } from 'node-appwrite'
 import { useForm } from 'react-hook-form'
 
 const useCreateParty = () => {
   const { register, handleSubmit } = useForm<createFormType>()
   const [create] = createPartyApi.useCreatePartyMutation()
-  const [upload] = createPartyApi.useUploadImgMutation()
 
   const onSubmit = handleSubmit(async (form) => {
-    const formData = new FormData()
-    formData.append('image', form.image[0])
-    const res = await upload(formData)
-    if ('error' in res) return console.log(res.error)
+    const image = await storage.createFile(
+      env.VITE_BUCKET_ID,
+      'hello',
+      InputFile.fromBlob(form.image[0], form.image[0].name)
+    )
+    console.log(image)
 
-    create({
-      ...form,
-      image: res.data.image,
-    })
+    // create({
+    //   ...form,
+    //   image: res.data.image,
+    // })
   })
 
   return { register, onSubmit }
