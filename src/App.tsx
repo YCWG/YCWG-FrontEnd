@@ -8,6 +8,10 @@ const App = () => {
       element: <L.DefaultLayout />,
       children: [
         {
+          path: '/',
+          element: <P.MainPage />,
+        },
+        {
           path: '/signin',
           element: <P.Signin />,
         },

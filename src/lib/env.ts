@@ -8,9 +8,16 @@ const {
   VITE_PROJECT_ID,
   VITE_BUCKET_ID,
   VITE_API_KEY,
+  VITE_MAP_API_KEY,
 } = import.meta.env
 
-if (!VITE_SERVER_URL || !VITE_PROJECT_ID || !VITE_BUCKET_ID || !VITE_API_KEY)
+if (
+  !VITE_SERVER_URL ||
+  !VITE_PROJECT_ID ||
+  !VITE_BUCKET_ID ||
+  !VITE_API_KEY ||
+  !VITE_MAP_API_KEY
+)
   throw new Error('missing environment value')
 
 const env = {
@@ -23,6 +30,7 @@ const env = {
   VITE_PROJECT_ID: VITE_PROJECT_ID + '',
   VITE_BUCKET_ID: VITE_BUCKET_ID + '',
   VITE_API_KEY: VITE_API_KEY + '',
+  VITE_MAP_API_KEY: VITE_MAP_API_KEY + '',
 }
 
 export default env

@@ -1,6 +1,6 @@
+import { Party } from '@features/parties/components'
 import { FaRegUserCircle } from 'react-icons/fa'
 import * as S from './style'
-import { Party } from '@features/parties/components'
 
 const UserPage = () => {
   return (
